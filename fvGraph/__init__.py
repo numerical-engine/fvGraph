@@ -1,1 +1,1 @@
-from fvGraph.core import Module
+from fvGraph.core import Module2D
