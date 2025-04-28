@@ -163,7 +163,7 @@ def get_edge_list(node_tags:np.ndarray, COO:np.ndarray)->list:
         * node_tagsは反時計回りの順に並ぶ。
         * エッジは反時計回りの順に並ぶ。
     """
-    node_tags = np.concatenate((node_tags, np.array([node_tags])))
+    node_tags = np.concatenate((node_tags, np.array([node_tags[0]])))
     edge_list = []
     for n_st, n_fn in zip(node_tags[:-1], node_tags[1:]):
         idx = np.where((COO[0] == n_st)*(COO[1] == n_fn))[0]
