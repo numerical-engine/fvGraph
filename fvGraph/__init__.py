@@ -1,2 +1,2 @@
 from fvGraph.core import Module2D
-from fvGraph import utils
+from fvGraph import utils, algorithm

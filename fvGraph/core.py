@@ -75,6 +75,14 @@ class Module2D:
     
 
     def save(self, save_dir:str)->None:
+        """データ構造を保存
+
+        Args:
+            save_dir (str): 保存先
+        Note:
+            * 各属性がnp.ndarrayでないとエラー。
+        """
+        assert isinstance(self.node, np.ndarray)
         os.makedirs(save_dir, exist_ok=True)
         self.mesh.write(f"{save_dir}/mesh.msh")
         np.save(f"{save_dir}/node.npy", self.node)
