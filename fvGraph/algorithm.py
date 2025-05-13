@@ -113,7 +113,7 @@ def get_gradient_cell(data:any, grad_phi:torch.Tensor)->torch.Tensor:
 
     return gphic
 
-def get_gradient_facet_2d(data:any, grad_phi:torch.Tensor)->torch.Tensor:
+def get_gradient_facet(data:any, grad_phi:torch.Tensor)->torch.Tensor:
     """ノード上の勾配からファセット中心の勾配を出力
 
     Args:
